@@ -14,36 +14,51 @@
 
 
     <TextView
+        android:id="@+id/tv_add_a_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="48sp"
-        android:text="Add a List"
-        android:id="@+id/tv_add_a_list"
         android:layout_centerHorizontal="true"
-        android:fontFamily="casual" />
+        android:fontFamily="casual"
+        android:text="Add a List"
+        android:textSize="48sp" />
+
+    <TextView
+        android:id="@+id/tv_list1a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_add_a_list"
+        android:fontFamily="casual"/>
+
+    <TextView
+        android:id="@+id/tv_list1b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_list1a"
+        android:fontFamily="casual"/>
+
 
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
         android:id="@+id/listView"
-        android:fontFamily="casual"
-        android:layout_below="@+id/tv_add_a_list" />
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tv_list1b"
+        android:fontFamily="casual" />
 
     <Button
+        android:id="@+id/btn_goto_all_lists"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="go back to all lists"
-        android:fontFamily="casual"
         android:layout_below="@id/listView"
-        android:id="@+id/btn_goto_all_lists" />
+        android:fontFamily="casual"
+        android:text="go back to all lists" />
 
     <Button
+        android:id="@+id/btn_goto_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="go back to main page"
-        android:fontFamily="casual"
         android:layout_below="@id/btn_goto_all_lists"
-        android:id="@+id/btn_goto_main" />
+        android:fontFamily="casual"
+        android:text="go back to main page" />
 
 
 

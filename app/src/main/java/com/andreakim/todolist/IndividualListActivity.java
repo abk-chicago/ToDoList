@@ -9,12 +9,17 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class IndividualListActivity extends AppCompatActivity {
 
 
     private Intent mIntentToGoMain;
     private Intent mIntentToGoBack;
+    private TextView mTxtName;
+    private TextView mTxtItemToDo;
+    private Intent mIntent;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +49,12 @@ public class IndividualListActivity extends AppCompatActivity {
         btnMain.setOnClickListener(listener);
         btnLists.setOnClickListener(listen);
 
+        mIntent = getIntent();
+        mTxtName = (TextView) findViewById(R.id.tv_list1a);
+        mTxtItemToDo = (TextView) findViewById(R.id.tv_list1b);
 
+        mTxtName.setText(mIntent.getStringExtra("LIST NAME"));
+        mTxtItemToDo.setText(mIntent.getStringExtra("DESCRIPTION"));
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
