@@ -69,7 +69,7 @@ public class ListofListsActivity extends AppCompatActivity {
   btnNxt.setOnClickListener(listener);
 
 
-    
+
 
 
 
