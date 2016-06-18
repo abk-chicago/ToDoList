@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class IndividualListActivity extends AppCompatActivity {
 
@@ -19,6 +20,8 @@ public class IndividualListActivity extends AppCompatActivity {
     private TextView mTxtName;
     private TextView mTxtItemToDo;
     private Intent mIntent;
+    private Toast mToast;
+    String mFunnyMessage = "I STILL don't do anything. Did you think I would change my mind?";
 
 
     @Override
@@ -64,8 +67,7 @@ public class IndividualListActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Toast.makeText(getApplicationContext(), mFunnyMessage, Toast.LENGTH_LONG).show();
             }
         });
     }

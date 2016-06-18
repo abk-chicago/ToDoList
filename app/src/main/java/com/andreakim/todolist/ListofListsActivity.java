@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -25,6 +26,8 @@ public class ListofListsActivity extends AppCompatActivity {
     private ArrayList<ListofListsActivity> mList;
     private AdapterView.OnClickListener mListener;
 
+    private Toast mToast;
+    String mFunnyMessage = "Wow! You are PERSISTENT!";
 
     //todo: model code
     private void addListofListsActivity(String name, String desc) {
@@ -85,8 +88,7 @@ public class ListofListsActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Toast.makeText(getApplicationContext(), mFunnyMessage, Toast.LENGTH_LONG).show();
             }
         });
     }
