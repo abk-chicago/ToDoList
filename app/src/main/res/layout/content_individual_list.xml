@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:fontFamily="casual"
+        android:textStyle="bold"
         android:text="Add a List"
         android:textSize="48sp" />
 

@@ -40,7 +40,7 @@
         jar="/Users/andreakim/adi/ToDoList/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="e530503765d083110d4f8a32b6dca319858a30ab">
+        sha1="f42af859bd0023461c37773910214a311deae565">
         <dex dex="/Users/andreakim/adi/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_e145424ca72a8fc8c9734cbecc9ce64dfb2d3218/classes.dex" />
     </item>
     <item
@@ -61,7 +61,7 @@
         jar="/Users/andreakim/adi/ToDoList/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="debabc10ba69861d81e1c9d9deaec83aefab6be4">
+        sha1="8e33feaf6abe11fec6d7c7dd1c133f673c7ea02b">
         <dex dex="/Users/andreakim/adi/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b2015ccd068ce743d79d4d25dc20f5fe87c0f8ba/classes.dex" />
     </item>
     <item

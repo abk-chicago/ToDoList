@@ -32,6 +32,10 @@
         "source": "/Users/andreakim/adi/ToDoList/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
     {
+        "merged": "/Users/andreakim/adi/ToDoList/app/build/intermediates/res/merged/debug/drawable/bkgrd.jpg",
+        "source": "/Users/andreakim/adi/ToDoList/app/src/main/res/drawable/bkgrd.jpg"
+    },
+    {
         "merged": "/Users/andreakim/adi/ToDoList/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
         "source": "/Users/andreakim/adi/ToDoList/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_btn_default_mtrl_shape.xml"
     },
