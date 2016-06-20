@@ -30,7 +30,8 @@
         android:layout_below="@id/tv_main_title"
         android:layout_marginTop="12dp"
         android:fontFamily="casual"
-        android:text="This app will manage your to do lists for you.  Create, edit, or delete lists as needed."/>
+        android:textSize="24sp"
+        android:text="This app will manage your To Do Lists for you.  \n Create, edit, or delete lists as needed."/>
     <Button
         android:id="@+id/btn_take_to_list"
         android:layout_width="match_parent"

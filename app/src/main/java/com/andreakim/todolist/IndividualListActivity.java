@@ -9,8 +9,12 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -19,11 +23,13 @@ public class IndividualListActivity extends AppCompatActivity {
 
     private Intent mIntentToGoMain;
     private Intent mIntentToGoBack;
-    private TextView mTxtName;
-    private TextView mTxtItemToDo;
+    private EditText mTxtName;
+//    private TextView mTxtItemToDo;
     private Intent mIntent;
-    private ArrayList mAddItem;
-    private ArrayList mDeleteItem;
+//    private ArrayList mAddItem;
+//    private ArrayList mDeleteItem;
+    private ListView lv;
+
     private Toast mToast;
     final String mFunnyMessage = "I STILL don't do anything. Did you think I would change my mind?";
 
@@ -37,33 +43,6 @@ public class IndividualListActivity extends AppCompatActivity {
         Button btnLists = (Button) findViewById(R.id.btn_goto_all_lists);
         mIntentToGoMain = new Intent(IndividualListActivity.this, MainActivity.class);
         mIntentToGoBack = new Intent(IndividualListActivity.this, ListofListsActivity.class);
-
-
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.i("LISTS", "Click btn_add_item");
-                startActivity(mAddItem);
-            }
-
-        };
-
-        View.OnClickListener listen = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.i("LISTS", "Click btn_delete_item");
-                startActivity(removeItem(ArrayList mDeleteItem));
-            }
-
-        };
-
-
-
-
-
-
-
-
 
 
         View.OnClickListener listener = new View.OnClickListener() {
@@ -84,24 +63,36 @@ public class IndividualListActivity extends AppCompatActivity {
         btnMain.setOnClickListener(listener);
         btnLists.setOnClickListener(listen);
 
-        mIntent = getIntent();
-        mTxtName = (TextView) findViewById(R.id.tv_list1a);
-        mTxtItemToDo = (TextView) findViewById(R.id.tv_list1b);
+       // mIntent = getIntent();
+       // mTxtName = (EditText) findViewById(R.id.et_name);
 
-        mTxtName.setText(mIntent.getStringExtra("LIST NAME"));
-        mTxtItemToDo.setText(mIntent.getStringExtra("DESCRIPTION"));
+        final EditText txt = (EditText)findViewById(R.id.et_name);
+      //  final String name = txt.getText();
 
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+            View.OnClickListener oclSubmit = new View.OnClickListener() {
+                @Override
+                public void onClick (View v) {
+                    Log.i("LISTS", "Click submit");
+                    Intent mInt = new Intent(IndividualListActivity.this, ListofListsActivity.class);
+                    assert txt != null;
+                    mInt.putExtra("Name", txt.getText());
+                    startActivity(mInt);
+                    }
+                };
+        final Button submit = (Button) findViewById(R.id.submit);
+        submit.setOnClickListener(oclSubmit);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        TextView nameText = (TextView) findViewById(R.id.tv_list1a);
+        nameText.setText(txt.getText());
+
+
+            FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick (View view){
                 Toast.makeText(getApplicationContext(), mFunnyMessage, Toast.LENGTH_LONG).show();
-            }
-        });
-    }
-
+                }
+    });
+}
 }

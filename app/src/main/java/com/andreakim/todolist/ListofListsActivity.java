@@ -1,5 +1,6 @@
 package com.andreakim.todolist;
 
+import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -18,36 +19,18 @@ import java.util.ArrayList;
 
 public class ListofListsActivity extends AppCompatActivity {
 
-    private Intent mIntentToMain;
-    private Intent mIntentToIndividualList;
-
-    private ListView mListView;
-    private ArrayAdapter<ListofListsActivity> mArrayAdapter;
-    private ArrayList<ListofListsActivity> mList;
-    private AdapterView.OnClickListener mListener;
-
-
-    private Toast mToast;
     final String mFunnyMessage = "Wow! You are PERSISTENT!";
-
-    //todo: model code
-    private void addListofListsActivity(String name, String desc) {
-        if (mList != null && mArrayAdapter != null) {
-            ListofListsActivity toDoList = new ListofListsActivity();
-            mList.add(toDoList);
-            mArrayAdapter.notifyDataSetChanged();
-
-        } else {
-            mList = new ArrayList<ListofListsActivity>();
-            ListofListsActivity toDoList = new ListofListsActivity();
-            mList.add(toDoList);
-            mArrayAdapter.notifyDataSetChanged();
-        }
-    }
+    //private Intent mIntentToMain;  <-- they can use "back button"
+    private Intent mIntentToIndividualList;
+    private ListView mListView;
+    private ArrayAdapter<String> mArrayAdapter;
+    private ArrayList<String> mArrayList;
+    private AdapterView.OnClickListener mListener;
+    private Toast mToast;
 
     private void removeList(int id) {
-        if (mList !=null) {
-            mList.remove(id);
+        if (mArrayList !=null) {
+            mArrayList.remove(id);
         }
     }
 
@@ -57,17 +40,15 @@ public class ListofListsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_listof_lists);
 
         Button btnNxt = (Button) findViewById(R.id.btn_add_list);
+        Button deleteBtn = (Button) findViewById(R.id.btn_delete_list);
 
-        mIntentToMain = new Intent(ListofListsActivity.this, MainActivity.class);
+        //mIntentToMain = new Intent(ListofListsActivity.this, MainActivity.class);   <-- they can use "back button"
         mIntentToIndividualList = new Intent(ListofListsActivity.this, IndividualListActivity.class);
 
 
-        mList = (ListView) findViewById(R.id.listView);
-        mArrayAdapter = new ArrayAdapter<String>(this, R.layout.list_row_item, mList);
-
-
-
-
+        mListView = (ListView) findViewById(R.id.lv_list_oflists);
+        mArrayList = new ArrayList<>();
+        mArrayList.add("Sample List");
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -75,23 +56,25 @@ public class ListofListsActivity extends AppCompatActivity {
                 Log.i("LISTS", "Click btn_main_add_list");
                 startActivity(mIntentToIndividualList);
             }
+        };
 
-    };
+        btnNxt.setOnClickListener(listener);
 
-  btnNxt.setOnClickListener(listener);
+        Intent mGetNameIntent = getIntent();
+        String mName = mGetNameIntent.getStringExtra("name");
+        if (mName != null) {
+            mArrayList.add(mName);
+        };
+        mArrayAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_row_item, mArrayList);
 
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getApplicationContext(), "List TBD" , Toast.LENGTH_LONG).show();
+            }
+        });
 
-
-
-
-
-
-
-
-
-
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+        mListView.setAdapter(mArrayAdapter);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -101,7 +84,6 @@ public class ListofListsActivity extends AppCompatActivity {
             }
         });
     }
-
 }
 /**
  * Created by andreakim on 6/17/16.
