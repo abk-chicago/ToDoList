@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Intent mIntentToListLists;
     private Toast mToast;
-    String mFunnyMessage = "Haha! I don't do anything. Add it to my To Do List!";
+    final String mFunnyMessage = "Haha! I don't do anything. Add it to my To Do List!";
 
 
     @Override
@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
     };
         btnToList.setOnClickListener(listener);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

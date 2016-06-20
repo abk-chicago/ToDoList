@@ -26,8 +26,9 @@ public class ListofListsActivity extends AppCompatActivity {
     private ArrayList<ListofListsActivity> mList;
     private AdapterView.OnClickListener mListener;
 
+
     private Toast mToast;
-    String mFunnyMessage = "Wow! You are PERSISTENT!";
+    final String mFunnyMessage = "Wow! You are PERSISTENT!";
 
     //todo: model code
     private void addListofListsActivity(String name, String desc) {
@@ -42,7 +43,6 @@ public class ListofListsActivity extends AppCompatActivity {
             mList.add(toDoList);
             mArrayAdapter.notifyDataSetChanged();
         }
-
     }
 
     private void removeList(int id) {
@@ -57,8 +57,17 @@ public class ListofListsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_listof_lists);
 
         Button btnNxt = (Button) findViewById(R.id.btn_add_list);
+
         mIntentToMain = new Intent(ListofListsActivity.this, MainActivity.class);
         mIntentToIndividualList = new Intent(ListofListsActivity.this, IndividualListActivity.class);
+
+
+        mList = (ListView) findViewById(R.id.listView);
+        mArrayAdapter = new ArrayAdapter<String>(this, R.layout.list_row_item, mList);
+
+
+
+
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -81,8 +90,8 @@ public class ListofListsActivity extends AppCompatActivity {
 
 
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -93,11 +102,7 @@ public class ListofListsActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * Created by andreakim on 6/17/16.
-     */
-    public static class Item {
-
-
-    }
 }
+/**
+ * Created by andreakim on 6/17/16.
+ */

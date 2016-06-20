@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class IndividualListActivity extends AppCompatActivity {
 
 
@@ -20,8 +22,10 @@ public class IndividualListActivity extends AppCompatActivity {
     private TextView mTxtName;
     private TextView mTxtItemToDo;
     private Intent mIntent;
+    private ArrayList mAddItem;
+    private ArrayList mDeleteItem;
     private Toast mToast;
-    String mFunnyMessage = "I STILL don't do anything. Did you think I would change my mind?";
+    final String mFunnyMessage = "I STILL don't do anything. Did you think I would change my mind?";
 
 
     @Override
@@ -33,6 +37,34 @@ public class IndividualListActivity extends AppCompatActivity {
         Button btnLists = (Button) findViewById(R.id.btn_goto_all_lists);
         mIntentToGoMain = new Intent(IndividualListActivity.this, MainActivity.class);
         mIntentToGoBack = new Intent(IndividualListActivity.this, ListofListsActivity.class);
+
+
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("LISTS", "Click btn_add_item");
+                startActivity(mAddItem);
+            }
+
+        };
+
+        View.OnClickListener listen = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("LISTS", "Click btn_delete_item");
+                startActivity(removeItem(ArrayList mDeleteItem));
+            }
+
+        };
+
+
+
+
+
+
+
+
+
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
