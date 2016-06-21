@@ -2301,8 +2301,8 @@ containing a value of this type.
         public static final int btn_bk_to_main=0x7f0c006f;
         public static final int btn_delete_item=0x7f0c006d;
         public static final int btn_delete_list=0x7f0c007a;
-        public static final int btn_goto_all_lists=0x7f0c0075;
-        public static final int btn_goto_main=0x7f0c0076;
+        public static final int btn_goto_all_lists=0x7f0c0076;
+        public static final int btn_goto_main=0x7f0c0075;
         public static final int btn_take_to_list=0x7f0c007d;
         public static final int buttonPanel=0x7f0c0044;
         public static final int cancel_action=0x7f0c0088;

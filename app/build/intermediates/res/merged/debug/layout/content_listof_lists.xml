@@ -25,7 +25,7 @@
 <ListView
     android:id="@+id/lv_list_oflists"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="120dp"
     android:layout_below="@id/tv_main"
     android:fontFamily="casual"/>
 

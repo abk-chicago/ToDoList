@@ -602,8 +602,8 @@ int id btn_bk_to_lists 0x7f0c006e
 int id btn_bk_to_main 0x7f0c006f
 int id btn_delete_item 0x7f0c006d
 int id btn_delete_list 0x7f0c007a
-int id btn_goto_all_lists 0x7f0c0075
-int id btn_goto_main 0x7f0c0076
+int id btn_goto_all_lists 0x7f0c0076
+int id btn_goto_main 0x7f0c0075
 int id btn_take_to_list 0x7f0c007d
 int id buttonPanel 0x7f0c0044
 int id cancel_action 0x7f0c0088
