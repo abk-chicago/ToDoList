@@ -9,34 +9,6 @@
         <dex dex="/Users/andreakim/adi/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_779544f4cd92cc05aa2617e37f104f991277377a/classes.dex" />
     </item>
     <item
-        jar="/Users/andreakim/adi/ToDoList/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="/Users/andreakim/adi/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_471d720e99592d0813c9e9812899d9d41622410b/classes.dex" />
-    </item>
-    <item
-        jar="/Users/andreakim/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="/Users/andreakim/adi/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_5bcc0272f94df9bee08382eebc2441df4196664e/classes.dex" />
-    </item>
-    <item
-        jar="/Users/andreakim/adi/ToDoList/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="5c8d80ad2a2188f41c820475d0bbc988f3ef66e2">
-        <dex dex="/Users/andreakim/adi/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b2015ccd068ce743d79d4d25dc20f5fe87c0f8ba/classes.dex" />
-    </item>
-    <item
-        jar="/Users/andreakim/adi/ToDoList/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/Users/andreakim/adi/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_3abd24439f47ca2be9431a22be7daad3d37638de/classes.dex" />
-    </item>
-    <item
         jar="/Users/andreakim/adi/ToDoList/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
         jumboMode="true"
         revision="23.0.3"
@@ -51,6 +23,13 @@
         <dex dex="/Users/andreakim/adi/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_7c0b86302435a6d5c2ba61ecfd3eed87ceab17b3/classes.dex" />
     </item>
     <item
+        jar="/Users/andreakim/adi/ToDoList/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/andreakim/adi/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_471d720e99592d0813c9e9812899d9d41622410b/classes.dex" />
+    </item>
+    <item
         jar="/Users/andreakim/adi/ToDoList/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
         jumboMode="true"
         revision="23.0.3"
@@ -61,7 +40,7 @@
         jar="/Users/andreakim/adi/ToDoList/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="872785419ac0742ccaced9e555551724ec1815b4">
+        sha1="0da3d204466445b89fee8eae63df36e6ebab4dae">
         <dex dex="/Users/andreakim/adi/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_e145424ca72a8fc8c9734cbecc9ce64dfb2d3218/classes.dex" />
     </item>
     <item
@@ -70,6 +49,27 @@
         revision="23.0.3"
         sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
         <dex dex="/Users/andreakim/adi/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.4.0_a8709d0c00d899fc1e991c8590d9a061546c9af7/classes.dex" />
+    </item>
+    <item
+        jar="/Users/andreakim/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/andreakim/adi/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_5bcc0272f94df9bee08382eebc2441df4196664e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/andreakim/adi/ToDoList/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="554416f991119e5064f8b1f7a253ec57343d4479">
+        <dex dex="/Users/andreakim/adi/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b2015ccd068ce743d79d4d25dc20f5fe87c0f8ba/classes.dex" />
+    </item>
+    <item
+        jar="/Users/andreakim/adi/ToDoList/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/andreakim/adi/ToDoList/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_3abd24439f47ca2be9431a22be7daad3d37638de/classes.dex" />
     </item>
 
 </items>
