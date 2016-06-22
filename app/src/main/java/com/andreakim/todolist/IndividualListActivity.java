@@ -98,7 +98,7 @@ public class IndividualListActivity extends AppCompatActivity {
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick (View view){
-                Toast.makeText(getApplicationContext(), mFunnyMessage, Toast.LENGTH_LONG).show();
+                Toast.makeText(IndividualListActivity.this, mFunnyMessage, Toast.LENGTH_LONG).show();
                 }
     });
 }
