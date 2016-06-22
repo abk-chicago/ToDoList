@@ -60,8 +60,8 @@ public class IndividualListActivity extends AppCompatActivity {
         btnMain.setOnClickListener(listener);
         btnLists.setOnClickListener(listen);
 
-       // mIntent = getIntent();
-       // mTxtName = (EditText) findViewById(R.id.et_name);
+        mIntent = getIntent();
+        mTxtName = (EditText) findViewById(R.id.et_name);
 
         final EditText txt = (EditText)findViewById(R.id.et_name);
       //  final String name = txt.getText();
@@ -80,14 +80,14 @@ public class IndividualListActivity extends AppCompatActivity {
         final Button submit = (Button) findViewById(R.id.submit);
         submit.setOnClickListener(oclSubmit);
 
-        TextView nameText = (TextView) findViewById(R.id.tv_list1a);
+        final TextView nameText = (TextView) findViewById(R.id.tv_list1a);
         nameText.setText(txt.getText());
 
         View.OnLongClickListener longListen = new View.OnLongClickListener() {
             @Override
             public boolean onLongClick (View v) {
                 Log.i("LISTS", "Click delete");
-                // do something on long click
+
                 return true;
             }
         };

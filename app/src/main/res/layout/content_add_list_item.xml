@@ -42,6 +42,16 @@
     android:fontFamily="casual">
 </ListView>
 
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/submit2"
+    android:fontFamily="casual"
+    android:text="submit"
+    android:onClick="listener2"
+    android:layout_alignBottom="@id/list_view_add_item"
+    android:layout_alignRight="@id/list_view_add_item"
+    />
 
     <Button
         android:id="@+id/btn_bk_to_lists"

@@ -22,70 +22,65 @@ import java.util.List;
 public class ListofListsActivity extends AppCompatActivity {
 
     final String mFunnyMessage = "Wow! You are PERSISTENT!";
-    //private Intent mIntentToMain;  <-- they can use "back button"
+
     private Intent mIntentToIndividualList;
+
     private ListView mListView;
     private ArrayAdapter<String> mArrayAdapter;
-    private ArrayList<String> mArrayList;
+    ArrayList<String> mArrayList = new ArrayList<>();
     private AdapterView.OnClickListener mListener;
+
+
+
     private Toast mToast;
+    String[][] allArrays = new String[][] { };
 
-    String[] list = new String[];
 
-    private void removeList(int id) {
-        if (mArrayList !=null) {
-            mArrayList.remove(id);
-        }
-    }
-
-    private void addList(list) {
-        if (mArrayList !=null) {
-            mArrayList.add(list);
-        } else {
-            mArrayList = new ArrayList<String>();
-
-        }
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listof_lists);
 
         Button btnNxt = (Button) findViewById(R.id.btn_add_list);
-        Button deleteBtn = (Button) findViewById(R.id.btn_delete_list);
 
-        //mIntentToMain = new Intent(ListofListsActivity.this, MainActivity.class);   <-- they can use "back button"
         mIntentToIndividualList = new Intent(ListofListsActivity.this, IndividualListActivity.class);
 
 
         mListView = (ListView) findViewById(R.id.lv_list_oflists);
-        mArrayList = new ArrayList<>();
-        mArrayList.add("Sample List");
+//
+//        private void addList (String name, String desc){
+//        if (mArrayList != null) {
+//            ListItem stuff = new ListItem(name, desc);
+//          //  mArrayList.add(stuff);
+//        } else {
+//        mArrayAdapter = new ArrayAdapter<String>;
+//        };
 
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick (View v) {
-                Log.i("LISTS", "Click btn_main_add_list");
-                startActivity(mIntentToIndividualList);
-            }
-        };
 
-        btnNxt.setOnClickListener(listener);
-
-        Intent mGetNameIntent = getIntent();
-        String mName = mGetNameIntent.getStringExtra("name");
-        if (mName != null) {
-            mArrayList.add(mName);
-        };
-        mArrayAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_row_item, mArrayList);
+//        Intent mGetNameIntent = getIntent();
+//        String mName = mGetNameIntent.getStringExtra("name");
+//        if (mName != null) {
+//            //add
+//        };
+//        mArrayAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_row_item, mArrayList);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), "List TBD" , Toast.LENGTH_LONG).show();
+
             }
         });
 
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Log.i("MAIN", "Click btn_take_to_list");
+                startActivity(mIntentToIndividualList);
+            }
+        };
+        btnNxt.setOnClickListener(listener);
+
+        
         mListView.setAdapter(mArrayAdapter);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

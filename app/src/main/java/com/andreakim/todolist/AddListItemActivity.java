@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -21,8 +22,8 @@ public class AddListItemActivity extends AppCompatActivity {
     private Intent mIntentToMain;
     private Intent mIntentToIndividualList;
     private Intent mIntentToLists;
-    private ArrayList<String> mAddItem = new ArrayList<>();
-    private ArrayAdapter<String> mAddItemAdapter;
+    private ArrayList<ListItem> mAddItem = new ArrayList<>();
+    private ArrayAdapter<ListItem> mAddItemAdapter;
     private String mItem;
     private ListView mListItemView;
     private AdapterView.OnClickListener mListener;
@@ -34,7 +35,6 @@ public class AddListItemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_list_item);
 
         Button btnNxt = (Button) findViewById(R.id.btn_add_list);
-        Button btnNxt2 = (Button) findViewById(R.id.btn_delete_list);
 
         mIntentToMain = new Intent(AddListItemActivity.this, MainActivity.class);
         mIntentToIndividualList = new Intent(AddListItemActivity.this, IndividualListActivity.class);
@@ -44,23 +44,9 @@ public class AddListItemActivity extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("LISTS", "Click btn_add_item");
-                // mAddItem.add();
+                Log.i("MAIN", "Click btn_take_to_list");
             }
-
         };
-
-        View.OnClickListener listen = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.i("LISTS", "Click btn_delete_item");
-                //  mAddItem.clear();
-            }
-
-        };
-
-        btnNxt.setOnClickListener(listener);
-        btnNxt2.setOnClickListener(listen);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -70,7 +56,38 @@ public class AddListItemActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), mFunnyMessage, Toast.LENGTH_LONG).show();
             }
         });
+
+
+        View.OnClickListener listener2 = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("LISTS", "Click btn_add_item");
+            }
+        };
+
+//    private void addListItem(String name, String desc) {
+//        if (mAddItem != null) {
+//            ListItem stuff = new ListItem(name, desc);
+//            mAddItem.add(stuff);
+//        } else {
+//            ArrayList mAddItem = new ArrayList();
+//            ListItem stuff = new ListItem(name, desc);
+//            mAddItem.add(stuff);
+//        };
+//    };
+//    private void removeListItem(String name, String desc) {
+//        if (mAddItem != null) {
+//            mAddItem.remove(id);
+//        }
+//    };
+
+        View.OnLongClickListener listen = new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Log.i("LISTS", "Click delete");
+                mAddItem.clear();
+                return true;
+            }
+        };
     }
 }
-
-
