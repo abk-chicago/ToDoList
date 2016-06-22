@@ -19,8 +19,8 @@
     android:layout_centerHorizontal="true"
     android:fontFamily="casual"
     android:textStyle="bold"
-    android:text="Your Lists"
-    android:textSize="48sp"/>
+    android:text="Your Lists \n (Long-Click to delete a list)"
+    android:textSize="36sp"/>
 
 <ListView
     android:id="@+id/lv_list_oflists"
@@ -38,13 +38,5 @@
         android:layout_marginTop="12dp"
         android:fontFamily="casual"
         android:text="add new list" />
-
-    <Button
-        android:id="@+id/btn_delete_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_add_list"
-        android:fontFamily="casual"
-        android:text="delete a list" />
 
 </RelativeLayout>

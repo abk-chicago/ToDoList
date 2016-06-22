@@ -24,10 +24,7 @@ public class IndividualListActivity extends AppCompatActivity {
     private Intent mIntentToGoMain;
     private Intent mIntentToGoBack;
     private EditText mTxtName;
-//    private TextView mTxtItemToDo;
     private Intent mIntent;
-//    private ArrayList mAddItem;
-//    private ArrayList mDeleteItem;
     private ListView lv;
 
     private Toast mToast;
@@ -85,6 +82,16 @@ public class IndividualListActivity extends AppCompatActivity {
 
         TextView nameText = (TextView) findViewById(R.id.tv_list1a);
         nameText.setText(txt.getText());
+
+        View.OnLongClickListener longListen = new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick (View v) {
+                Log.i("LISTS", "Click delete");
+                // do something on long click
+                return true;
+            }
+        };
+
 
 
             FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

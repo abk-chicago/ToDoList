@@ -20,49 +20,47 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="casual"
         android:text="Add Items to Your List"
-        android:textSize="48sp"
+        android:textSize="36sp"
         android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="casual"
+        android:text="(or Long-Click to delete items)"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
 
 <ListView
     android:id="@+id/list_view_add_item"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:layout_below="@+id/textView"
+    android:layout_below="@+id/textView2"
     android:fontFamily="casual">
 </ListView>
-    <Button
-        android:id="@+id/btn_delete_item"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="casual"
-        android:text="delete item in list"
-        android:layout_below="@+id/list_view_add_item"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+
 
     <Button
         android:id="@+id/btn_bk_to_lists"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
-        android:text="go back to My Lists"
-        android:layout_below="@+id/btn_delete_item"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/list_view_add_item"
+        android:fontFamily="casual"
+        android:text="go back to My Lists" />
 
     <Button
         android:id="@+id/btn_bk_to_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
-        android:text="go back to Main Page"
-        android:layout_below="@+id/btn_delete_item"
+        android:layout_below="@+id/list_view_add_item"
+        android:layout_toEndOf="@+id/btn_bk_to_lists"
         android:layout_toRightOf="@+id/btn_bk_to_lists"
-        android:layout_toEndOf="@+id/btn_bk_to_lists" />
-
-
-
-
-
+        android:fontFamily="casual"
+        android:text="go back to Main Page" />
 
 </RelativeLayout>

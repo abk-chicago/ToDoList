@@ -15,7 +15,9 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListofListsActivity extends AppCompatActivity {
 
@@ -28,12 +30,22 @@ public class ListofListsActivity extends AppCompatActivity {
     private AdapterView.OnClickListener mListener;
     private Toast mToast;
 
+    String[] list = new String[];
+
     private void removeList(int id) {
         if (mArrayList !=null) {
             mArrayList.remove(id);
         }
     }
 
+    private void addList(list) {
+        if (mArrayList !=null) {
+            mArrayList.add(list);
+        } else {
+            mArrayList = new ArrayList<String>();
+
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

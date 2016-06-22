@@ -136,12 +136,12 @@
         "source": "/Users/andreakim/adi/ToDoList/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "/Users/andreakim/adi/ToDoList/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
-        "source": "/Users/andreakim/adi/ToDoList/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/notification_media_action.xml"
-    },
-    {
         "merged": "/Users/andreakim/adi/ToDoList/app/build/intermediates/res/merged/debug/layout/content_individual_list.xml",
         "source": "/Users/andreakim/adi/ToDoList/app/src/main/res/layout/content_individual_list.xml"
+    },
+    {
+        "merged": "/Users/andreakim/adi/ToDoList/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
+        "source": "/Users/andreakim/adi/ToDoList/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/notification_media_action.xml"
     },
     {
         "merged": "/Users/andreakim/adi/ToDoList/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
